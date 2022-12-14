@@ -1,0 +1,6 @@
+<h1>Log In Here</h1>
+
+<%= form_tag '/signin' do |f| %>
+  <%= select_tag "user[id]", options_from_collection_for_select(User.all, :id, :name) %>
+  <%= submit_tag "Sign In" %>
+<% end %>

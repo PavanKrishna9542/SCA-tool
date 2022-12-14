@@ -1,0 +1,15 @@
+<h1>Attractions</h1>
+
+<%= admin_attraction_link %>
+
+<% @attractions.each do |attraction| %>
+  <h3>Attraction: <%= link_to attraction.name, attraction_path(attraction) %><br></h3>
+  <%= go_on_attraction_link(attraction) %>
+  <h4>Tickets Required: <%= attraction.tickets %><br></h4>
+  <h4>Nausea Rating: <%= attraction.nausea_rating %></h4>
+  <h4>Happiness Rating: <%= attraction.happiness_rating %><br></h4>
+  <h4>Minimum Height Requirement: <%= attraction.min_height %><br></h4>
+
+  <%= admin_attraction_show(attraction) %>
+<% end %>
+

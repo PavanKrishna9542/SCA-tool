@@ -1,0 +1,14 @@
+<h2><%= @attraction.name %></h2>
+<h3>Minimum height: <%= @attraction.min_height %></h3>
+<h3>Happiness Rating: <%= @attraction.happiness_rating %></h3>
+<h3>Nausea Rating: <%= @attraction.nausea_rating %></h3>
+<h3>Tickets: <%= @attraction.tickets %></h3>
+
+<%= admin_edit_attraction %>
+
+<% if @user.admin == false %>
+<%= form_for @user do |f| %>
+<input type="hidden" name="attraction_id" value="<%= params[:id] %>" >
+       <%= f.submit "Go on this ride" %>
+  <% end %>
+<% end %>

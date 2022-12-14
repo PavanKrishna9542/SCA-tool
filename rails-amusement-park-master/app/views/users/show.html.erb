@@ -1,0 +1,16 @@
+<% if flash[:alert] %>
+<div class="alert"><%= flash[:alert] %></div>
+<% end %>
+
+<%= admin_access %>
+
+<h1>User Profile</h1>
+
+<h3>Name: <%= @user.name %><br></h3>
+<h3>Mood: <%= @user.mood %><br></h3>
+<h3>Tickets: <%= @user.tickets %><br></h3>
+<h3>Height: <%= @user.height %><br></h3>
+
+<%= link_to "See attractions", attractions_path %>
+
+<%= link_to "Log Out", logout_path, method: :delete %>
