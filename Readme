@@ -1,0 +1,5 @@
+Run the python file.
+Observe that tkinter GUI opens.
+Click on Browse Repository and select Rails amusement park directory.
+Click on Run
+Note that the tool displays CVEs of vulnerable versions in console
